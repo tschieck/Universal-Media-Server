@@ -5,10 +5,6 @@ db_con();
 mysql_select_db("media");
  
 $command = $_GET["mode"];
-
-?>
-<?php //<xml> ?>
-    <?php
     if ($command == "TV") {
         $query = mysql_query("SELECT * FROM TV_Shows");
         echo "<shows>\n";
@@ -33,6 +29,6 @@ $command = $_GET["mode"];
 
     }
     ?>
-<?php //</xml> ?>
+
 
 
