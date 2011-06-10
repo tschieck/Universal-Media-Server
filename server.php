@@ -5,7 +5,7 @@ db_con();
 mysql_select_db("media");
  
 $command = $_GET["mode"];
-    if ($command == "TV") {
+    if (isset($command) && $command == "TV") {
         $query = mysql_query("SELECT * FROM TV_Shows");
         echo "<shows>\n";
         
@@ -24,8 +24,8 @@ $command = $_GET["mode"];
             $query = mysql_query("SELECT * FROM TV_Episodes WHERE ");
         }
     }   else {
-        echo "<version>" . $software["Version"] . "</version>";
-        echo "<modules>" . $software["Modules"] . "</modules>";
+        echo "<version>0.01&alpha;</version>";
+        echo "<modules>TV</modules>";
 
     }
     ?>
