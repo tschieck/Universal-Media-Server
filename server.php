@@ -4,7 +4,9 @@ header("Content-Type: text/xml");
 db_con();
 mysql_select_db("media");
  
-$command = $_GET["mode"];
+
+
+if (isset($_GET["mode"])) {$command = $_GET["mode"];}
     if (isset($command) && $command == "TV") {
         $query = mysql_query("SELECT * FROM TV_Shows");
         echo "<shows>\n";

@@ -1,5 +1,7 @@
 <?php
 require("functions.php");
+require("classes.php");
+
 
 $db_user = "db_user";
 $db_host = "localhost";
